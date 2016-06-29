@@ -1,0 +1,13 @@
+language: c
+compiler:
+  - clang
+  - gcc
+env:
+  - LDFLAGS=-m64
+  - LDFLAGS=-m32
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq gcc-multilib
+before_script:
+  - cat /proc/cpuinfo | grep name | uniq
+script: make && ./tests && ./mr_benchmark
