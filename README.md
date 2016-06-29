@@ -14,4 +14,4 @@ Usage:
 ./karp-rabin <fasta_file> <pattern> <precision>
 ```
 
-If `<precision = -1` Error check on every occurency we find.
+If `<precision> = -1` Error check on every occurency we find.
